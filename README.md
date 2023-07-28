@@ -2,7 +2,7 @@
 A library for TM1637 displays that should work with many 8 bit pics.
 
 Developed using Microchip's XC8 compiler and tested on the PIC12F1840
-and 12F18F6410.
+and 18F6410.
 
 I developed the PIC demo code for the TM1637 in my other repositories
 into a generic TM1637 PIC library. The library functions are in file TM1637PIC.c
