@@ -70,26 +70,6 @@ uint8_t ldgZeroB = 0;               // If set true blanks leading zeros
 uint8_t rightShift = 0;             // Right shifts displayed digits, discarding values on right, use after rounding
 const uint8_t brightness = 2;             // Brightness, max 7, 0 is off
 
-
-// MAX31865 definitions:
-#define HIGH_THRESH_MSB 0x87                            // High fault threshold is 0x87B6, low fault 0x196C, configuration values are ADC RTD output in 16 bit format
-#define HIGH_THRESH_LSB 0xB6                            // Fault will be flagged if RTD resistance > 212.05R, equivalent to approx 300C or if < 39.72R, -150C
-#define LOW_THRESH_MSB  0x19
-#define LOW_THRESH_LSB 0x6C                                
-#define CONFIG_WRITE_ADDR 0x80                          // Note reg address has b7 set for writes
-#define CONFIG_READ_ADDR 0x00    
-#define RTDLSB 0x02                                     // RTD read data address LSB
-#define RTDMSB 0x01                                     // RTD read data address MSB
-#define FAULT_ADDR 0x07                                 // Fault register
-#define RTDFAULTBIT 0x01                                // Fault bit is bit 0 of rtd LSB 
-#define FAULTCLEAR 0b00000010                           // Bit D1 of config clears faults when set, autoclear
-#define BIAS_ON 0b10000000                              // Mask to set D7 of config register, turns on RTD bias current     
-#define CONVERSION_ON 0b00100000                        // Mask to set config D5, starts a one shot conversion
-#define CONFIG3WIRE 0b00110001       // Config register for MAX31865 set up with bias current off(D7) initially, 3 wire(D4),1 shot conversion
-#define CONFIG24WIRE 0b00100001      // Config setup for 2/4 wire sensors.Base configs do *not* clear faults, random initial data on read fault reg.
-#define TEMPMULTIPLIER 100           // Temperature is returned as an integer, for n decimal places multiply float result by 10^n
-#define MAXDRDY 0x08                 // MAX31865 DRDY o/p connected to RA3, active low
-
 // Global variables:
 const uint8_t portDefault = 0;       // PORT A will be set to outputs, all low
 
