@@ -27,7 +27,7 @@
 #include "TM1637PIC.h"
 
 // Bit time for serial comms set here, may be reduced from default 100us if display dio/clk lines have no capacitor:
-#define BIT_TIME 5               // Bit time in us, note TM1637 max data rate of 500kHz assuming short signal path
+#define BIT_TIME 100             // Bit time in us, note TM1637 max data rate of 500kHz assuming short signal path
 #define _XTAL_FREQ 32000000      // Define clock frequency used by xc8 __delay(time) functions
 
 // Define library scope constants:
