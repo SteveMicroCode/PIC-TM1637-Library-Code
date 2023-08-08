@@ -15,6 +15,6 @@ allows configuration of both the port and pins for TM1637 connection to the PIC.
 The library is intended to be resource sparing for use on 8 bit PICs. It does not
 attempt floating point handling or offer full printf() style output capability.
 My demo shows how it can be used to output floating point numbers. Basic rounding and
-zero blanking is possible however.
+zero blanking are possible however.
 
 Steve, July 2023
