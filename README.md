@@ -17,4 +17,10 @@ attempt floating point handling or offer full printf() style output capability.
 My demo shows how it can be used to output floating point numbers. Basic rounding and
 zero blanking are possible however.
 
-Steve, July 2023
+An in-progress development version of this library includes a keypad scanning function, implementing
+a 2x8 matrix keypad as per the TM1637 datasheet schematic. Function keyscan() returns the number of
+any key pressed. The code does add some overhead and I will upload it as a separate library
+version when completed. Meanwhile this newer library version is available in my PIC 18F66K90 
+repository:   https://github.com/SteveMicroCode/PIC18F66K90-code
+
+Steve, November 2023
